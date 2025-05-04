@@ -1,4 +1,4 @@
-# QRコード在庫管理Webアプリ
+# ScanSnapSave(QRコード在庫管理Webアプリ)
 
 このプロジェクトでは、ECサイトでの在庫管理を効率化するために、QRコードを活用したWebアプリを開発しました。スマートフォンやタブレットを使用してQRコードをスキャンし、製品の情報をデータベースへ登録・管理できます。加えて、製品画像のアップロード機能も備え、社内で閲覧できるようになっています。
 
@@ -16,6 +16,7 @@
 | **認証機能** | Laravel Breeze（Bladeテンプレート + Tailwind CSS） |
 | **フロントエンド** | PWA（オフライン対応、ホーム画面追加） |
 | **QRコード読み取り** | `jsQR`ライブラリ |
+| **クラウドストレージ** |  Amazon S3（製品画像をアップロード・保存） |
 | **データベース** | 11.4.5-MariaDB (MySQL) |
 | **開発環境** | Docker（v27.5.1）、XAMPP（v8.2.12） |
 | **デプロイ環境** | AWS LightSail (Debian GNU/Linux 12) |
@@ -25,17 +26,17 @@
 <br>
 **[https://scansnapsave.com](https://scansnapsave.com)**
 
-**注意事項**
-このアプリは **検証用・開発用** に作成されたものであり、本番環境での利用は推奨しません。  
+**注意事項: **
+このURL上で動作しているアプリは **検証用・開発用** に作成されたものであり、本番環境での利用は推奨しません。  
 予告なくアプリが削除される場合があり、継続的な運用やサポートは保証できません。  
 そのため、業務用途や重要な環境で利用する場合は **自己責任** でお願いします。  
 本アプリの動作やデータに関する保証は一切ありませんので、ご了承ください。
 
 ## インストール方法
 ### リポジトリをクローン
-```bash
-git clone https://github.com/your-username/qr-inventory-app.git
-cd qr-inventory-app
+```txt
+git clone https://github.com/Nakkinakki55/Scan_Snap_Save.git
+cd Scan_Snap_Save
 ```
 
 # デプロイ方法
