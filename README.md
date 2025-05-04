@@ -1,66 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# QRコード在庫管理Webアプリ
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+このプロジェクトでは、ECサイトでの在庫管理を効率化するために、QRコードを活用したWebアプリを開発しました。スマートフォンやタブレットを使用してQRコードをスキャンし、製品の情報をデータベースへ登録・管理できます。加えて、製品画像のアップロード機能も備え、社内で閲覧できるようになっています。
 
-## About Laravel
+## 特徴
+- **PWA対応**：スマホやタブレットでアプリのように使用可能
+- **QRコードリーダー搭載**：`jsQR`ライブラリを利用
+- **クラウドストレージ**：Amazon S3へ画像をアップロード
+- **低コスト運用**：App StoreやGoogle Playの登録不要
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 使用技術
+| 技術 | 詳細 |
+|------|------|
+| **開発言語** | PHP 8.3.19 |
+| **フレームワーク** | Laravel 12.1.1 |
+| **認証機能** | Laravel Breeze（Bladeテンプレート + Tailwind CSS） |
+| **フロントエンド** | PWA（オフライン対応、ホーム画面追加） |
+| **QRコード読み取り** | `jsQR`ライブラリ |
+| **データベース** | 11.4.5-MariaDB (MySQL) |
+| **開発環境** | Docker（v27.5.1）、XAMPP（v8.2.12） |
+| **デプロイ環境** | AWS LightSail (Debian GNU/Linux 12) |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## デプロイ先URL
+本アプリは以下のURLで公開されています。ぜひアクセスして動作を確認してください！
+<br>
+**[https://scansnapsave.com](https://scansnapsave.com)**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**注意事項**
+このアプリは **検証用・開発用** に作成されたものであり、本番環境での利用は推奨しません。  
+予告なくアプリが削除される場合があり、継続的な運用やサポートは保証できません。  
+そのため、業務用途や重要な環境で利用する場合は **自己責任** でお願いします。  
+本アプリの動作やデータに関する保証は一切ありませんので、ご了承ください。
 
-## Learning Laravel
+## インストール方法
+### リポジトリをクローン
+```bash
+git clone https://github.com/your-username/qr-inventory-app.git
+cd qr-inventory-app
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# デプロイ方法
+このアプリをAWS LightSailにデプロイする手順については、以下の記事を参考にするとスムーズに進められます。
+<br>
+**[PWAでQRコード読取アプリを開発！iPhone/Android対応＆S3・Lightsailの設定も解説 #AWS - Qiita](https://copilot.microsoft.com/chats/W1sAHWgSebZ1Yx2d6LMEd)**
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+# 主な機能
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **スマートフォンやタブレットで簡単アクセス**  
+  ブラウザから `https://scansnapsave.com` にアクセスするだけで、特別なインストール不要で利用可能。
 
-## Laravel Sponsors
+- **QRコードスキャン機能**  
+  スマホやタブレットのカメラを使って、製品のQRコードをスキャンし、データベースに登録。
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **画像撮影＆アップロード**  
+  スキャンした製品の画像を撮影し、サーバーへアップロード。社内で簡単に閲覧可能。
 
-### Premium Partners
+- **登録情報＆画像の閲覧ページ**  
+  登録した製品情報と画像を一覧表示し、視覚的に確認できる専用ページを用意。
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- **情報の検索＆管理機能**  
+  登録された製品情報をキーワードで検索、詳細を確認し、管理できるシステムを搭載。
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
