@@ -39,12 +39,12 @@ git clone https://github.com/Nakkinakki55/Scan_Snap_Save.git
 cd Scan_Snap_Save
 ```
 
-# デプロイ方法
+## デプロイ方法
 このアプリをAWS LightSailにデプロイする手順については、以下の記事を参考にするとスムーズに進められます。
 <br>
 **[PWAでQRコード読取アプリを開発！iPhone/Android対応＆S3・Lightsailの設定も解説 #AWS - Qiita](https://copilot.microsoft.com/chats/W1sAHWgSebZ1Yx2d6LMEd)**
 
-# 主な機能
+## 主な機能
 
 - **スマートフォンやタブレットで簡単アクセス**  
 ブラウザにアクセスするだけで、特別なインストール不要で利用可能。
